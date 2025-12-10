@@ -15,17 +15,17 @@ export const Socials = () => {
     const socialLinks: SocialLink[] = [
         {
             name: "instagram",
-            url: info.instagram,
+            url: info.socials.instagram,
             icon: <FaInstagram />
         },
         {
             name: "facebook",
-            url: info.facebook,
+            url: info.socials.facebook,
             icon: <FaFacebook />
         },
         {
             name: "linkedin",
-            url: info.linkedin,
+            url: info.socials.linkedin,
             icon: <FaLinkedin />
         },
     ];
