@@ -31,7 +31,7 @@ export const Socials = () => {
     ];
 
     return (
-        <div className="flex">
+        <div className="flex gap-2">
             {
                 socialLinks.map(({ name, url, icon }) => (
                     <Link key={name} href={url} target="_blank" className="text-white mx-2 text-xl hover:text-gray-300">

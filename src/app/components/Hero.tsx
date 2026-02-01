@@ -7,16 +7,16 @@ const Hero = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
 
     return (
-        <div className="h-screen w-full relative overflow-hidden">
+        <div className="h-screen w-full relative overflow-hidden bg-[url('/hero-bg.jpg')] bg-cover bg-center">
 
             {/* Fallback Image (Visible until video loads) */}
-            <div
+            {/* <div
                 className={`absolute inset-0 w-full h-full bg-[url('/fallback.jpg')] bg-cover bg-center transition-opacity duration-700 ${videoLoaded ? "opacity-0" : "opacity-100"
                     }`}
-            ></div>
+            ></div> */}
 
             {/* Background Video */}
-            <video
+            {/* <video
                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoLoaded ? "opacity-100" : "opacity-0"
                     }`}
                 autoPlay
@@ -26,14 +26,14 @@ const Hero = () => {
                 preload="auto"
                 src="/banner_video.mp4"
                 onCanPlay={() => setVideoLoaded(true)}
-            />
+            /> */}
 
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/80"></div>
 
             {/* Content */}
             <div className="relative z-10 h-full px-20">
-                <Header />
+                {/* <Header /> */}
             </div>
         </div>
     );
