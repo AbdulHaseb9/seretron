@@ -1,35 +1,35 @@
+"use client";
+
 import { Contact } from "@/components/shared/contact"
 import { Button } from "@/components/ui/button"
 import { navigation } from "@/data/navigation"
-import Image from "next/image"
+import Logo from "../Logo"
 
 const Header = () => {
     return (
-        <div className="absolute z-50 w-full px-20">
-            <Contact type="header" />
-            <header className="flex items-center justify-between">
-                <Image
-                    src="/seretron.jpg"
-                    width={90}
-                    height={75}
-                    alt="Seretron Logo" />
-                <nav>
-                    {navigation.quicklinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="text-xl mx-4 text-white hover:text-gray-300">
-                            {link.name}
-                            {link.icon && <link.icon className="inline-block ml-1 h-4 w-4" />}
-                        </a>
-                    ))}
-                </nav>
-                <div className="space-x-4">
-                    <Button className="text-white text-lg p-6" type="button" variant={"outline"}>Get Quote</Button>
-                    <Button className="bg-green-600 text-white text-lg p-6 hover:bg-green-800">Explore Pricing</Button>
-                </div>
-            </header>
-        </div>
+        <>
+            {/* Main Header */}
+            <div className="absolute z-50 w-full px-20 bg-black/95 backdrop-blur-sm border-b border-green-500/30">
+                <Contact type="header" />
+                <header className="flex items-center justify-between py-4">
+                    <Logo className="flex-row gap-3" />
+                    <nav className="flex items-center gap-6">
+                        {navigation.quicklinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className="text-white hover:text-[#00FF00] transition-colors text-sm font-medium">
+                                {link.name}
+                                {link.icon && <link.icon className="inline-block ml-1 h-3 w-3" />}
+                            </a>
+                        ))}
+                    </nav>
+                    <Button className="bg-[#00FF00] text-black hover:bg-[#00CC00] text-sm px-6 py-2 font-semibold">
+                        Request a Demo
+                    </Button>
+                </header>
+            </div>
+        </>
     )
 }
 export default Header

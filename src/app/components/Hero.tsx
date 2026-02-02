@@ -1,39 +1,82 @@
 "use client";
 
-import { useState } from "react";
-import Header from "./header/Header";
+import { Button } from "@/components/ui/button";
+import { Lock, Shield, Settings } from "lucide-react";
 
 const Hero = () => {
-    const [videoLoaded, setVideoLoaded] = useState(false);
-
     return (
-        <div className="h-screen w-full relative overflow-hidden bg-[url('/hero-bg.jpg')] bg-cover bg-center">
+        <div className="min-h-screen w-full relative overflow-hidden bg-black">
+            {/* Background Pattern - Circuit Board Effect */}
+            <div className="absolute inset-0 opacity-20">
+                <div className="absolute inset-0" style={{
+                    backgroundImage: `radial-gradient(circle at 2px 2px, rgba(0, 255, 0, 0.5) 1px, transparent 0)`,
+                    backgroundSize: '40px 40px'
+                }}></div>
+            </div>
 
-            {/* Fallback Image (Visible until video loads) */}
-            {/* <div
-                className={`absolute inset-0 w-full h-full bg-[url('/fallback.jpg')] bg-cover bg-center transition-opacity duration-700 ${videoLoaded ? "opacity-0" : "opacity-100"
-                    }`}
-            ></div> */}
-
-            {/* Background Video */}
-            {/* <video
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoLoaded ? "opacity-100" : "opacity-0"
-                    }`}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                src="/banner_video.mp4"
-                onCanPlay={() => setVideoLoaded(true)}
-            /> */}
+            {/* Glowing Network Lines */}
+            <div className="absolute inset-0 overflow-hidden">
+                <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+                    <path d="M0,400 Q300,200 600,400 T1200,400" stroke="rgba(0, 255, 0, 0.3)" strokeWidth="2" fill="none" />
+                    <path d="M0,300 Q400,500 800,300 T1600,300" stroke="rgba(0, 255, 0, 0.2)" strokeWidth="2" fill="none" />
+                </svg>
+            </div>
 
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/80"></div>
+            <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Content */}
-            <div className="relative z-10 h-full px-20">
-                {/* <Header /> */}
+            <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-20 py-32 pt-40">
+                <div className="text-center max-w-4xl mx-auto mb-16">
+                    <h1 className="text-6xl font-bold text-white mb-6 leading-tight">
+                        Keeping Your Business One Step Ahead of Hackers
+                    </h1>
+                    <p className="text-xl text-gray-300 mb-8">
+                        Proactive Defense for a Safer Digital Future
+                    </p>
+                    <Button className="bg-[#00FF00] text-black hover:bg-[#00CC00] text-lg px-8 py-6 rounded-lg font-semibold">
+                        Get Protected Today
+                    </Button>
+                </div>
+
+                {/* Feature Highlights */}
+                <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto mt-20">
+                    <div className="bg-black/50 backdrop-blur-sm border border-[#00FF00]/50 rounded-lg p-6 hover:bg-black/70 transition-all">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="bg-[#00FF00]/20 p-3 rounded-lg">
+                                <Lock className="w-8 h-8 text-[#00FF00]" />
+                            </div>
+                            <h3 className="text-white text-xl font-semibold">Penetration Testing</h3>
+                        </div>
+                        <p className="text-gray-300 text-sm">
+                            Identify vulnerabilities before attackers do with comprehensive security assessments.
+                        </p>
+                    </div>
+
+                    <div className="bg-black/50 backdrop-blur-sm border border-[#00FF00]/50 rounded-lg p-6 hover:bg-black/70 transition-all">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="bg-[#00FF00]/20 p-3 rounded-lg">
+                                <Shield className="w-8 h-8 text-[#00FF00]" />
+                            </div>
+                            <h3 className="text-white text-xl font-semibold">Data Security</h3>
+                        </div>
+                        <p className="text-gray-300 text-sm">
+                            Protect your sensitive information with advanced encryption and access controls.
+                        </p>
+                    </div>
+
+                    <div className="bg-black/50 backdrop-blur-sm border border-[#00FF00]/50 rounded-lg p-6 hover:bg-black/70 transition-all">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="bg-[#00FF00]/20 p-3 rounded-lg">
+                                <Settings className="w-8 h-8 text-[#00FF00]" />
+                            </div>
+                            <h3 className="text-white text-xl font-semibold">Incident Response</h3>
+                        </div>
+                        <p className="text-gray-300 text-sm">
+                            Rapid response and recovery services to minimize damage from security breaches.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     );

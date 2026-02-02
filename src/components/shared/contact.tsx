@@ -30,15 +30,30 @@ export const Contact = ({ type }: { type: "header" | "footer" }) => {
         },
     ];
 
+    if (type === "header") {
+        return (
+            <div className="flex items-center justify-between py-2 text-sm">
+                <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-2">
+                        <FaPhoneAlt className="text-[#00FF00]" />
+                        <span className="text-white">{info.phone}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <IoMdMail className="text-[#00FF00]" />
+                        <span className="text-white">{info.email.official}</span>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className={`flex items-center justify-between`}>
-            <div className={`flex items-center justify-between gap-14 py-3 ${type === "header" ? "text-sm flex-row" : "text-base "}`}>
+            <div className={`flex items-center justify-between gap-14 py-3 text-base`}>
                 {contactDetails.map((detail, index) => (
                     <div key={index} className={`flex items-center`}>
-                        <div className="text-lg text-green-600 mr-2">{detail.icon}</div>
-                        {type === "footer" ?
-                            <h4 className="mb-1 font-semibold">{detail.title}</h4>
-                            : null}
+                        <div className="text-lg text-[#00FF00] mr-2">{detail.icon}</div>
+                        <h4 className="mb-1 font-semibold">{detail.title}</h4>
                         <div>
                             <p className="text-white">{detail.text}</p>
                         </div>
