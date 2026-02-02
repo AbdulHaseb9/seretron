@@ -26,21 +26,21 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Content */}
-            <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-20 py-32 pt-40">
-                <div className="text-center max-w-4xl mx-auto mb-16">
-                    <h1 className="text-6xl font-bold text-white mb-6 leading-tight">
+            <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 lg:px-20 py-20 sm:py-24 md:py-32 pt-24 sm:pt-28 md:pt-32 lg:pt-40">
+                <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4">
                         Keeping Your Business One Step Ahead of Hackers
                     </h1>
-                    <p className="text-xl text-gray-300 mb-8">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 px-4">
                         Proactive Defense for a Safer Digital Future
                     </p>
-                    <Button className="bg-[#00FF00] text-black hover:bg-[#00CC00] text-lg px-8 py-6 rounded-lg font-semibold">
+                    <Button className="bg-[#00FF00] text-black hover:bg-[#00CC00] text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-lg font-semibold">
                         Get Protected Today
                     </Button>
                 </div>
 
                 {/* Feature Highlights */}
-                <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto mt-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto mt-8 sm:mt-12 md:mt-20 px-4">
                     <div className="bg-black/50 backdrop-blur-sm border border-[#00FF00]/50 rounded-lg p-6 hover:bg-black/70 transition-all">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="bg-[#00FF00]/20 p-3 rounded-lg">

@@ -25,8 +25,8 @@ const Footer = () => {
 
     return (
         <footer className="bg-black text-white border-t border-[#00FF00]/30">
-            <div className="px-20 py-16">
-                <div className="grid grid-cols-4 gap-12 mb-12">
+            <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-8 sm:py-12 md:py-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-12">
                     {/* Left Column - Company Info */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
@@ -88,16 +88,16 @@ const Footer = () => {
             </div>
 
             {/* Bottom Footer Bar */}
-            <div className="border-t border-[#00FF00]/30 px-20 py-6">
-                <div className="flex items-center justify-between">
-                    <p className="text-gray-300 text-sm">
+            <div className="border-t border-[#00FF00]/30 px-4 sm:px-6 md:px-12 lg:px-20 py-4 sm:py-6">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p className="text-gray-300 text-xs sm:text-sm text-center sm:text-left">
                         © 2023 Seretron. All rights reserved.
                     </p>
-                    <div className="flex items-center gap-6">
-                        <a href="#terms" className="text-gray-300 hover:text-white text-sm transition-colors">
+                    <div className="flex items-center gap-4 sm:gap-6">
+                        <a href="#terms" className="text-gray-300 hover:text-white text-xs sm:text-sm transition-colors">
                             Terms & Conditions
                         </a>
-                        <a href="#privacy" className="text-gray-300 hover:text-white text-sm transition-colors">
+                        <a href="#privacy" className="text-gray-300 hover:text-white text-xs sm:text-sm transition-colors">
                             Privacy Policy
                         </a>
                     </div>

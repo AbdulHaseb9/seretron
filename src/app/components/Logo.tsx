@@ -1,10 +1,9 @@
 const Logo = ({ className = "" }: { className?: string }) => {
     return (
-        <div className={`flex items-center gap-3 ${className}`}>
+        <div className={`flex items-center gap-2 sm:gap-3 ${className}`}>
             {/* Circuit Board "S" Graphic */}
             <svg
-                width="50"
-                height="65"
+                className="w-8 h-10 sm:w-10 sm:h-12 md:w-12 md:h-16"
                 viewBox="0 0 50 65"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +38,7 @@ const Logo = ({ className = "" }: { className?: string }) => {
             </svg>
             
             {/* SERETRON Text */}
-            <div className="text-white font-bold text-2xl tracking-wider uppercase">
+            <div className="text-white font-bold text-lg sm:text-xl md:text-2xl tracking-wider uppercase">
                 SERETRON
             </div>
         </div>

@@ -32,15 +32,15 @@ export const Contact = ({ type }: { type: "header" | "footer" }) => {
 
     if (type === "header") {
         return (
-            <div className="flex items-center justify-between py-2 text-sm">
-                <div className="flex items-center gap-6">
-                    <div className="flex items-center gap-2">
-                        <FaPhoneAlt className="text-[#00FF00]" />
-                        <span className="text-white">{info.phone}</span>
+            <div className="hidden md:flex items-center justify-between py-2 text-xs sm:text-sm">
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
+                    <div className="flex items-center gap-1 sm:gap-2">
+                        <FaPhoneAlt className="text-[#00FF00] text-xs sm:text-sm" />
+                        <span className="text-white text-xs sm:text-sm truncate">{info.phone}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <IoMdMail className="text-[#00FF00]" />
-                        <span className="text-white">{info.email.official}</span>
+                    <div className="flex items-center gap-1 sm:gap-2">
+                        <IoMdMail className="text-[#00FF00] text-xs sm:text-sm" />
+                        <span className="text-white text-xs sm:text-sm truncate hidden lg:inline">{info.email.official}</span>
                     </div>
                 </div>
             </div>

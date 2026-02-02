@@ -26,19 +26,19 @@ const BlogSection = () => {
     ];
 
     return (
-        <section className="py-20 px-20 bg-white">
+        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20 bg-white">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
                     Stay Updated with the Latest Cybersecurity Trends
                 </h2>
-                <p className="text-gray-600 text-lg mb-12 text-center max-w-3xl mx-auto">
+                <p className="text-gray-600 text-base sm:text-lg mb-8 sm:mb-12 text-center max-w-3xl mx-auto px-4">
                     Get insights, reports, and expert advice on the latest cybersecurity trends and threats.
                 </p>
 
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {posts.map((post, index) => (
                         <div key={index} className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className={`${post.imageBg} h-48 flex items-center justify-center relative`}>
+                            <div className={`${post.imageBg} h-40 sm:h-48 flex items-center justify-center relative`}>
                                 <div className="absolute inset-0 opacity-20">
                                     <div className="absolute inset-0" style={{
                                         backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.3) 1px, transparent 0)`,
@@ -53,10 +53,10 @@ const BlogSection = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="p-6">
-                                <span className="text-[#00FF00] text-sm font-semibold">{post.category}</span>
-                                <h3 className="text-xl font-semibold text-gray-900 mt-2 mb-4">{post.title}</h3>
-                                <div className="flex items-center gap-4 text-sm text-gray-600">
+                            <div className="p-4 sm:p-6">
+                                <span className="text-[#00FF00] text-xs sm:text-sm font-semibold">{post.category}</span>
+                                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mt-2 mb-3 sm:mb-4">{post.title}</h3>
+                                <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-600">
                                     <div className="flex items-center gap-1">
                                         <Eye className="w-4 h-4" />
                                         <span>{post.views}</span>

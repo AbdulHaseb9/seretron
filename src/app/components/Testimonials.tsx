@@ -23,18 +23,18 @@ const Testimonials = () => {
     ];
 
     return (
-        <section className="py-20 px-20 bg-white">
+        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20 bg-white">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
                     Hear It from Our Happy Customers
                 </h2>
-                <p className="text-gray-600 text-lg mb-12 text-center max-w-3xl mx-auto">
+                <p className="text-gray-600 text-base sm:text-lg mb-8 sm:mb-12 text-center max-w-3xl mx-auto px-4">
                     Don't just take our word for it. See what our clients have to say about working with us.
                 </p>
 
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                        <div key={index} className="bg-gray-50 rounded-lg p-4 sm:p-6 border border-gray-200">
                             <div className="flex items-center gap-4 mb-4">
                                 <div className="w-12 h-12 bg-[#00FF00] rounded-full flex items-center justify-center text-black font-bold">
                                     {testimonial.name.charAt(0)}
