@@ -16,8 +16,8 @@ const Header = () => {
             <div className="absolute z-50 w-full px-4 sm:px-6 md:px-12 lg:px-20 bg-black/95 backdrop-blur-sm border-b border-green-500/30">
                 <Contact type="header" />
                 <header className="flex items-center justify-between py-3 md:py-4">
-                    <Logo className="flex-row gap-2 md:gap-3" />
-                    
+                    <Logo />
+
                     {/* Desktop Navigation */}
                     <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
                         {navigation.quicklinks.map((link) => (
@@ -30,7 +30,7 @@ const Header = () => {
                             </a>
                         ))}
                     </nav>
-                    
+
                     {/* Desktop CTA Button */}
                     <Button className="hidden lg:flex bg-[#00FF00] text-black hover:bg-[#00CC00] text-sm px-4 xl:px-6 py-2 font-semibold">
                         Request a Demo
