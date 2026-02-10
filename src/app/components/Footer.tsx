@@ -1,7 +1,7 @@
 import Logo from "./Logo";
 import { Socials } from "@/components/shared/socials";
 import { info } from "@/data/info";
-import {  FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
@@ -30,10 +30,10 @@ const Footer = () => {
                     {/* Left Column - Company Info */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <Logo className="flex-row gap-2" />
+                            <Logo />
                         </div>
                         <p className="text-gray-300 text-sm mb-6">
-                            Protecting your digital assets with cutting-edge cybersecurity solutions. 
+                            Protecting your digital assets with cutting-edge cybersecurity solutions.
                             No Breaches No Excuses.
                         </p>
                         <Socials />
