@@ -1,7 +1,7 @@
 export const info = {
   companyName: "Seretron Technologies",
   address: "Karachi, Pakistan",
-  phone: "0313-1234567",
+  phone: "+92 329 0994620",
   email: {
     official: "seretronofficial@gmail.com",
   },

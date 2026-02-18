@@ -32,7 +32,7 @@ const Header = () => {
                     </nav>
 
                     {/* Desktop CTA Button */}
-                    <Button className="hidden lg:flex bg-[#00FF00] text-black hover:bg-[#00CC00] text-sm px-4 xl:px-6 py-2 font-semibold">
+                    <Button className="hidden lg:flex bg-maincol text-white hover:bg-maincolhov text-sm px-4 xl:px-6 py-2 font-semibold">
                         Request a Demo
                     </Button>
 

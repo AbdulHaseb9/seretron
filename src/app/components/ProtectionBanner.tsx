@@ -8,7 +8,7 @@ const ProtectionBanner = () => {
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white text-center sm:text-left">
                     Need 24/7 Protection From Cyber Attacks?
                 </h2>
-                <Button className="bg-[#00FF00] text-black hover:bg-[#00CC00] px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto">
+                <Button className="bg-maincol text-white hover:bg-maincolhov px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto">
                     Get a Free Quote
                 </Button>
             </div>

@@ -1,5 +1,4 @@
 import Hero from "./components/Hero";
-import Header from "./components/header/Header";
 import ProtectionBanner from "./components/ProtectionBanner";
 import ComprehensiveSolutions from "./components/ComprehensiveSolutions";
 import ServiceCategories from "./components/ServiceCategories";
@@ -11,12 +10,10 @@ import SuccessStories from "./components/SuccessStories";
 import Testimonials from "./components/Testimonials";
 import MonitoringSection from "./components/MonitoringSection";
 import BlogSection from "./components/BlogSection";
-import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <main className="relative">
-      <Header />
       <section id="home">
         <Hero />
       </section>
@@ -42,9 +39,6 @@ export default function Home() {
         <BlogSection />
       </section>
       <ProtectionBanner />
-      <section id="contact">
-        <Footer />
-      </section>
     </main>
   );
 }

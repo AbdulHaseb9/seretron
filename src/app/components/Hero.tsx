@@ -34,7 +34,7 @@ const Hero = () => {
                     <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 px-4">
                         Proactive Defense for a Safer Digital Future
                     </p>
-                    <Button className="bg-[#00FF00] text-black hover:bg-[#00CC00] text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-lg font-semibold">
+                    <Button className="bg-maincol text-white hover:bg-maincolhov text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-lg font-semibold">
                         Get Protected Today
                     </Button>
                 </div>
